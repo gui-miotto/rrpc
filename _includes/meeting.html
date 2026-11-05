@@ -1,0 +1,75 @@
+{%- assign m = include.meeting -%}
+{%- assign t = site.data.site.meetings -%}
+{%- assign day = m.date | date: "%Y-%m-%d" -%}
+{%- assign start_compact = m.start | remove: ":" -%}
+{%- assign end_compact = m.end | default: m.start | remove: ":" -%}
+{%- capture cal_title -%}{{ site.title }} #{{ m.edition }}{%- endcapture -%}
+{%- capture cal_details -%}{% for p in m.papers %}{{ forloop.index }}. {{ p.title }} ({{ p.presenter }})
+{% endfor %}{% if m.signup_url %}Sign up: {{ m.signup_url }}{% endif %}{%- endcapture -%}
+{%- capture cal_location -%}{{ m.location.name }}{% if m.location.address %}, {{ m.location.address }}{% endif %}{%- endcapture -%}
+<article class="meeting" data-date="{{ day }}" id="edition-{{ m.edition }}">
+  <div class="meeting__date">
+    <span class="meeting__day">{{ m.date | date: "%d" }}</span>
+    <span class="meeting__month">{{ m.date | date: "%b %Y" }}</span>
+    <span class="meeting__weekday">{{ m.date | date: "%A" }}</span>
+  </div>
+
+  <div class="meeting__body">
+    {%- if m.title and m.title != "" %}
+    <p class="label">{{ t.edition_prefix }} #{{ m.edition }}</p>
+    <h4 class="meeting__title">{{ m.title }}</h4>
+    {%- else %}
+    <h4 class="meeting__title">{{ t.edition_prefix }} #{{ m.edition }}</h4>
+    {%- endif %}
+    {%- if m.description and m.description != "" %}
+    <p class="meeting__desc">{{ m.description }}</p>
+    {%- endif %}
+
+    <ul class="meeting__facts">
+      <li>
+        <span class="fact__key">When</span>
+        <span>{{ m.date | date: "%a, %-d %B %Y" }}{% if m.start %} · {{ m.start }}{% if m.end %}–{{ m.end }}{% endif %}{% endif %}</span>
+      </li>
+      <li>
+        <span class="fact__key">Where</span>
+        <span>
+          {%- if m.location.map_url and m.location.map_url != "" -%}
+            <a href="{{ m.location.map_url }}" target="_blank" rel="noopener">{{ cal_location }}</a>
+          {%- else -%}
+            {{ cal_location }}
+          {%- endif -%}
+        </span>
+      </li>
+    </ul>
+
+    {%- if m.papers and m.papers.size > 0 %}
+    <p class="meeting__papers-heading label">{{ t.papers_heading }}</p>
+    <ol class="papers">
+      {%- for p in m.papers %}
+      <li class="paper">
+        <span class="paper__num">{{ forloop.index | prepend: "0" | slice: -2, 2 }}</span>
+        <div>
+          {%- if p.url and p.url != "" %}
+          <a class="paper__title" href="{{ p.url }}" target="_blank" rel="noopener">{{ p.title }}</a>
+          {%- else %}
+          <span class="paper__title">{{ p.title }}</span>
+          {%- endif %}
+          <span class="paper__presenter">{{ t.presenter_prefix }} <strong>{{ p.presenter | default: "TBA" }}</strong></span>
+        </div>
+        {%- if p.url and p.url != "" %}
+        <a class="paper__dl" href="{{ p.url }}" target="_blank" rel="noopener" aria-label="Download {{ p.title | escape }}">{{ t.paper_link_text }} ↓</a>
+        {%- endif %}
+      </li>
+      {%- endfor %}
+    </ol>
+    {%- endif %}
+
+    <div class="meeting__actions upcoming-only">
+      {%- if m.signup_url and m.signup_url != "" %}
+      <a class="btn btn--primary" href="{{ m.signup_url }}" target="_blank" rel="noopener">{{ t.signup_text }} →</a>
+      {%- endif %}
+      <a class="btn btn--ghost" target="_blank" rel="noopener"
+         href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text={{ cal_title | url_encode }}&amp;dates={{ m.date | date: '%Y%m%d' }}T{{ start_compact }}00/{{ m.date | date: '%Y%m%d' }}T{{ end_compact }}00&amp;ctz=Europe/Berlin&amp;details={{ cal_details | url_encode }}&amp;location={{ cal_location | url_encode }}">{{ t.calendar_text }}</a>
+    </div>
+  </div>
+</article>

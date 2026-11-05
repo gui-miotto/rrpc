@@ -1,0 +1,24 @@
+# One file per meeting. Copy this file to e.g. 002.yml and edit it to add a new meeting.
+# The file name only needs to be unique; meetings are ordered by "date".
+#
+# PLACEHOLDER CONTENT — replace with the real details of the first meeting.
+
+edition: 1
+date: 2026-12-03            # YYYY-MM-DD
+start: "18:30"              # 24h, local time (Europe/Berlin)
+end: "20:30"
+location:
+  name: Gateway Factory
+  address: Aachen
+  map_url: ""               # optional, e.g. a Google Maps / OpenStreetMap link
+signup_url: https://luma.com/   # Luma event link
+title: ""                   # optional, e.g. "Learning from demonstration"; defaults to "Edition #N"
+description: ""             # optional short blurb shown under the title
+
+papers:                     # 1 to 3 papers
+  - title: "Diffusion Policy: Visuomotor Policy Learning via Action Diffusion"
+    url: https://arxiv.org/pdf/2303.04137
+    presenter: TBA
+  - title: "RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control"
+    url: https://arxiv.org/pdf/2307.15818
+    presenter: TBA

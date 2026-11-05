@@ -1,0 +1,19 @@
+# Site settings — page text lives in _data/site.yml, meetings in _data/meetings/
+title: Rhine Robotics Paper Club
+description: In-person meetings around the Rhine region to present and discuss the latest research in robotics.
+lang: en
+timezone: Europe/Berlin
+
+# If the site is served from https://<user>.github.io/<repo>/, set baseurl to "/<repo>".
+# For a custom domain or a <user>.github.io repository, leave it empty.
+url: ""
+baseurl: ""
+
+exclude:
+  - reference_material
+  - instructions.md
+  - CLAUDE.md
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor

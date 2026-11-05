@@ -1,0 +1,107 @@
+# All text shown on the page. Edit freely — no HTML knowledge needed.
+# Text fields marked with "|" may contain several paragraphs (separate them with a blank line).
+
+discord_url: https://discord.gg/WNvN9YQQh
+
+header:
+  left: A gathering of curious minds
+  right: Rhine region
+  nav:
+    - { label: Meetings, href: "#meetings" }
+    - { label: How it works, href: "#how" }
+    - { label: About, href: "#about" }
+
+hero:
+  title_line1: Rhine
+  title_line2: Robotics
+  title_line3: Paper Club
+  tagline: Read deeply. Think together.
+  pitch: Meet in person to present and discuss the latest research in robotics — around Aachen, Bonn, Cologne, Düsseldorf and beyond.
+  primary_cta: Join us on Discord
+  secondary_cta: See upcoming meetings
+
+intro:
+  label: What is a paper club?
+  heading: A journal club for people who build robots
+  body: |
+    A paper club (or journal club) is a meeting where participants review interesting publications in a particular field. We agree on the papers beforehand and decide who will present them, followed by Q&A and open discussion.
+
+    It's a great opportunity to gain in-depth technical knowledge, stay up to date with the field, meet people working on similar problems, and develop presentation skills. Meetings are in person and rotate around the Rhine region.
+
+discord:
+  label: Continue the conversation
+  heading: Join us on Discord
+  body: The club is organised on Discord. That's where meetings are announced and the reading list takes shape.
+  points:
+    - Suggest papers you'd like to discuss
+    - Endorse other people's suggestions
+    - Volunteer to present — including your own research
+  link_text: discord.gg/WNvN9YQQh
+
+meetings:
+  label: The calendar
+  heading: Meetings
+  upcoming_heading: Upcoming
+  past_heading: Previous meetings
+  empty_upcoming: The next meeting will be announced on Discord soon.
+  empty_past: No meetings yet — the first one is coming up.
+  edition_prefix: "Edition"
+  signup_text: Sign up on Luma
+  calendar_text: Add to calendar
+  papers_heading: On the agenda
+  presenter_prefix: presented by
+  paper_link_text: PDF
+
+how:
+  label: The format
+  heading: How a meeting works
+  steps:
+    - title: Pick the papers
+      text: Papers are suggested and endorsed on Discord. One to three get selected per meeting.
+    - title: Volunteer to present
+      text: Each paper gets a presenter who walks everyone through the key ideas, methods and results.
+    - title: Discuss together
+      text: Every talk is followed by Q&A and an open discussion. Reading the papers beforehand is encouraged but not required.
+
+topics:
+  label: On the reading table
+  items:
+    - Robot learning
+    - Sim-to-real
+    - Perception
+    - Planning and Control
+    - Data management
+    - Deployments
+    - Hardware and Compute
+    - Robotics foundations
+  motto: Ideas on paper. Robots in the world.
+
+about:
+  label: The organiser
+  heading: About me
+  name: Gui
+  body: |
+    Hi, I'm Gui! I work in robotics at Bayer. I started the Rhine Robotics Paper Club to bring together people from academia and industry across the Rhine region who enjoy digging into robotics research — and to have a good excuse to read more papers.
+
+    If you have a question, want to host a meeting, or would like to present, reach out on Discord.
+
+supporters:
+  heading: "With the support of:"
+  items:
+    - name: Robotics Collective
+      subtitle: Aachen
+      logo: assets/img/supporters/robotics-collective.svg
+      show_name: true
+      url: ""   # optional website link
+    - name: Gateway Factory
+      logo: assets/img/supporters/gateway-factory.svg
+      show_name: false
+      url: https://www.gateway-factory.de/
+    - name: ICoM — RWTH Aachen University
+      logo: assets/img/supporters/icom-rwth.png
+      show_name: false
+      url: ""   # add the ICoM website link here
+
+footer:
+  credit: "Background illustration: L. A. Rygg, Mechanical horse, US 491,927 (1893)."
+  credit_url: https://patents.google.com/patent/US491927A/en

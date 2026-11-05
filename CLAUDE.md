@@ -1,0 +1,2 @@
+- never commit, stage or unstage anything unless explicitly asked to do so.
+- use uv for package creation and management
