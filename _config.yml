@@ -6,8 +6,8 @@ timezone: Europe/Berlin
 
 # If the site is served from https://<user>.github.io/<repo>/, set baseurl to "/<repo>".
 # For a custom domain or a <user>.github.io repository, leave it empty.
-url: ""
-baseurl: ""
+url: "https://gui-miotto.github.io"
+baseurl: "/rrpc"
 
 exclude:
   - reference_material
