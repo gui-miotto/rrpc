@@ -194,3 +194,7 @@ a.supporter:hover { opacity: .75; color: #000; }
   .paper__dl { grid-column: 2; justify-self: start; }
   .supporter img { height: 46px; }
 }
+
+/* Optional hero/topbar pieces (hidden when their text is empty in site.yml) */
+.hero__title + .accent-rule { margin-top: 1.6rem; }
+.topbar__nav:first-child { margin-inline: auto; }

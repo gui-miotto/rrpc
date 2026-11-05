@@ -4,8 +4,8 @@
 discord_url: https://discord.gg/WNvN9YQQh
 
 header:
-  left: A gathering of curious minds
-  right: Rhine region
+  left: # A gathering of curious minds # I decided to remove this for now
+  right: # Rhine region # I decided to remove this for now
   nav:
     - { label: Meetings, href: "#meetings" }
     - { label: How it works, href: "#how" }
@@ -15,7 +15,7 @@ hero:
   title_line1: Rhine
   title_line2: Robotics
   title_line3: Paper Club
-  tagline: Read deeply. Think together.
+  tagline:
   pitch: Meet in person to present and discuss the latest research in robotics — around Aachen, Bonn, Cologne, Düsseldorf and beyond.
   primary_cta: Join us on Discord
   secondary_cta: See upcoming meetings
@@ -64,7 +64,7 @@ how:
       text: Every talk is followed by Q&A and an open discussion. Reading the papers beforehand is encouraged but not required.
 
 topics:
-  label: On the reading table
+  label: "Anything robotics is welcome, for example:"
   items:
     - Robot learning
     - Sim-to-real
@@ -74,16 +74,13 @@ topics:
     - Deployments
     - Hardware and Compute
     - Robotics foundations
-  motto: Ideas on paper. Robots in the world.
 
 about:
   label: The organiser
   heading: About me
   name: Gui
   body: |
-    Hi, I'm Gui! I work in robotics at Bayer. I started the Rhine Robotics Paper Club to bring together people from academia and industry across the Rhine region who enjoy digging into robotics research — and to have a good excuse to read more papers.
-
-    If you have a question, want to host a meeting, or would like to present, reach out on Discord.
+    Hi, I'm Gui, and I work on robotics for agriculture! I'm a big fan of robot learning (reinforcement learning, vision-language-action models, world models, etc.), but I'm also interested in the more classic robotics topics. Feel free to connect with me on [Discord](https://discord.com/users/1222898874440745095) or [LinkedIn](https://www.linkedin.com/in/gui-miotto/).
 
 supporters:
   heading: "With the support of:"
@@ -92,7 +89,7 @@ supporters:
       subtitle: Aachen
       logo: assets/img/supporters/robotics-collective.svg
       show_name: true
-      url: ""   # optional website link
+      url: "https://roboticscollective.org/"
     - name: Gateway Factory
       logo: assets/img/supporters/gateway-factory.svg
       show_name: false
@@ -100,7 +97,7 @@ supporters:
     - name: ICoM — RWTH Aachen University
       logo: assets/img/supporters/icom-rwth.png
       show_name: false
-      url: ""   # add the ICoM website link here
+      url: "https://www.icom.rwth-aachen.de/"
 
 footer:
   credit: "Background illustration: L. A. Rygg, Mechanical horse, US 491,927 (1893)."

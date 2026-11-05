@@ -24,16 +24,10 @@ Supporter logos are in `assets/img/supporters/`. To add a supporter, add an item
 
 ## Local preview (optional)
 
-With Ruby installed:
+Install Ruby (Arch/CachyOS: `sudo pacman -S --needed ruby ruby-bundler base-devel`), then:
 
 ```sh
+bundle config set --local path vendor/bundle   # once; keeps gems inside the project
 bundle install
-bundle exec jekyll serve   # → http://localhost:4000
-```
-
-Or with Docker only:
-
-```sh
-docker run --rm -it -p 4000:4000 -v "$PWD":/srv -w /srv ruby:3.3 \
-  sh -c 'bundle install && bundle exec jekyll serve --host 0.0.0.0'
+bundle exec jekyll serve                       # → http://localhost:4000
 ```

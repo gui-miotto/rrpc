@@ -18,14 +18,18 @@ layout: default
 
 <div class="topbar">
   <div class="wrap topbar__inner">
+    {%- if s.header.left and s.header.left != "" %}
     <span class="eyebrow">{{ s.header.left }}</span>
+    {%- endif %}
     <nav class="topbar__nav" aria-label="Main">
       {%- for item in s.header.nav %}
       <a href="{{ item.href }}">{{ item.label }}</a>
       {%- endfor %}
       <a href="{{ s.discord_url }}" target="_blank" rel="noopener">Discord</a>
     </nav>
+    {%- if s.header.right and s.header.right != "" %}
     <span class="eyebrow topbar__right">{{ s.header.right }}</span>
+    {%- endif %}
   </div>
 </div>
 
@@ -37,7 +41,9 @@ layout: default
       <span class="hero__l2">{{ s.hero.title_line2 }}</span>
       <span class="hero__l3">{{ s.hero.title_line3 }}</span>
     </h1>
+    {%- if s.hero.tagline and s.hero.tagline != "" %}
     <p class="hero__tagline">{{ s.hero.tagline }}</p>
+    {%- endif %}
     <span class="accent-rule" aria-hidden="true"></span>
     <p class="hero__pitch">{{ s.hero.pitch }}</p>
     <div class="hero__ctas">
@@ -48,6 +54,23 @@ layout: default
 </header>
 
 <main>
+  <section class="section wrap" id="meetings">
+    <p class="label">{{ s.meetings.label }}</p>
+    <h2>{{ s.meetings.heading }}</h2>
+
+    <h3 class="group-heading">{{ s.meetings.upcoming_heading }}</h3>
+    <div class="meetings" data-group="upcoming">
+      {%- for m in upcoming %}{% include meeting.html meeting=m %}{% endfor %}
+    </div>
+    <p class="empty" data-empty="upcoming"{% if upcoming.size > 0 %} hidden{% endif %}>{{ s.meetings.empty_upcoming }} <a href="{{ s.discord_url }}" target="_blank" rel="noopener">Discord →</a></p>
+
+    <h3 class="group-heading">{{ s.meetings.past_heading }}</h3>
+    <div class="meetings meetings--past" data-group="past">
+      {%- for m in past %}{% include meeting.html meeting=m %}{% endfor %}
+    </div>
+    <p class="empty" data-empty="past"{% if past.size > 0 %} hidden{% endif %}>{{ s.meetings.empty_past }}</p>
+  </section>
+
   <section class="section wrap intro" id="intro">
     <div class="intro__text">
       <p class="label">{{ s.intro.label }}</p>
@@ -76,23 +99,6 @@ layout: default
     </div>
   </section>
 
-  <section class="section wrap" id="meetings">
-    <p class="label">{{ s.meetings.label }}</p>
-    <h2>{{ s.meetings.heading }}</h2>
-
-    <h3 class="group-heading">{{ s.meetings.upcoming_heading }}</h3>
-    <div class="meetings" data-group="upcoming">
-      {%- for m in upcoming %}{% include meeting.html meeting=m %}{% endfor %}
-    </div>
-    <p class="empty" data-empty="upcoming"{% if upcoming.size > 0 %} hidden{% endif %}>{{ s.meetings.empty_upcoming }} <a href="{{ s.discord_url }}" target="_blank" rel="noopener">Discord →</a></p>
-
-    <h3 class="group-heading">{{ s.meetings.past_heading }}</h3>
-    <div class="meetings meetings--past" data-group="past">
-      {%- for m in past %}{% include meeting.html meeting=m %}{% endfor %}
-    </div>
-    <p class="empty" data-empty="past"{% if past.size > 0 %} hidden{% endif %}>{{ s.meetings.empty_past }}</p>
-  </section>
-
   <section class="section wrap" id="how">
     <p class="label">{{ s.how.label }}</p>
     <h2>{{ s.how.heading }}</h2>
@@ -114,7 +120,9 @@ layout: default
       <li><span class="num">{{ forloop.index | prepend: "0" | slice: -2, 2 }}</span>{{ t }}</li>
       {%- endfor %}
     </ol>
+    {%- if s.topics.motto and s.topics.motto != "" %}
     <p class="motto">{{ s.topics.motto }}</p>
+    {%- endif %}
   </section>
 
   <section class="section wrap about" id="about">
