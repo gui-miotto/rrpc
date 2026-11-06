@@ -16,7 +16,7 @@ hero:
   title_line2: Robotics
   title_line3: Paper Club
   tagline:
-  pitch: Meet in person to present and discuss the latest research in robotics — around Aachen, Bonn, Cologne, Düsseldorf and beyond.
+  pitch: Meet in person to present and discuss the latest research in robotics — Aachen, Bonn, Cologne, Düsseldorf and beyond. Participation is free.
   primary_cta: Join us on Discord
   secondary_cta: See upcoming meetings
 
@@ -64,7 +64,7 @@ how:
       text: Every talk is followed by Q&A and an open discussion. Reading the papers beforehand is encouraged but not required.
 
 topics:
-  label: "Anything robotics is welcome, for example:"
+  label: "Anything robotics is welcome"
   items:
     - Robot learning
     - Sim-to-real
@@ -80,7 +80,11 @@ about:
   heading: About me
   name: Gui
   body: |
-    Hi, I'm Gui, and I work on robotics for agriculture! I'm a big fan of robot learning (reinforcement learning, vision-language-action models, world models, etc.), but I'm also interested in the more classic robotics topics. Feel free to connect with me on [Discord](https://discord.com/users/1222898874440745095) or [LinkedIn](https://www.linkedin.com/in/gui-miotto/).
+    Hi, I'm Gui and I'm pleased to manage this event with the kind support of the organizations below.
+    My main interests are robot learning (reinforcement learning, vision-language-action models, world models, etc.)
+    and robot fleet deployment and management. Personally, I work on robotics for agriculture at
+    [Bayer Crop Science](https://www.bayer.com/en/portfolio/agriculture/data-powered-agriculture/digital-farming){:target="_blank" rel="noopener"}.
+    Feel free to connect with me on [Discord](https://discord.com/users/1222898874440745095){:target="_blank" rel="noopener"} or [LinkedIn](https://www.linkedin.com/in/gui-miotto/){:target="_blank" rel="noopener"}.
 
 supporters:
   heading: "With the support of:"

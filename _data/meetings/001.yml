@@ -4,21 +4,21 @@
 # PLACEHOLDER CONTENT — replace with the real details of the first meeting.
 
 edition: 1
-date: 2026-12-03            # YYYY-MM-DD
-start: "18:30"              # 24h, local time (Europe/Berlin)
-end: "20:30"
+date: 2026-12-02            # YYYY-MM-DD
+start: "18:00"              # 24h, local time (Europe/Berlin)
+end: "20:00"
 location:
-  name: Gateway Factory
-  address: Aachen
-  map_url: ""               # optional, e.g. a Google Maps / OpenStreetMap link
-signup_url: https://luma.com/   # Luma event link
+  name: ICoM - Versuchshalle Robotik
+  address: Süsterfeldstraße 200 - 52072 Aachen
+  map_url: "https://maps.app.goo.gl/tfFdTGzdfvLjc52S8" # optional, e.g. a Google Maps / OpenStreetMap link
+signup_url: https://luma.com/unpllqmu   # Luma event link
 title: ""                   # optional, e.g. "Learning from demonstration"; defaults to "Edition #N"
 description: ""             # optional short blurb shown under the title
 
 papers:                     # 1 to 3 papers
-  - title: "Diffusion Policy: Visuomotor Policy Learning via Action Diffusion"
-    url: https://arxiv.org/pdf/2303.04137
+  - title: "TBA"
+    url: https://arxiv.org/
     presenter: TBA
-  - title: "RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control"
-    url: https://arxiv.org/pdf/2307.15818
+  - title: "TBA"
+    url: https://arxiv.org/
     presenter: TBA
