@@ -32,11 +32,14 @@
       </li>
       <li>
         <span class="fact__key">Where</span>
+        {%- capture where_html -%}
+          {{ m.location.name }}{% if m.location.address %}<br>{{ m.location.address }}{% endif %}
+        {%- endcapture -%}
         <span>
           {%- if m.location.map_url and m.location.map_url != "" -%}
-            <a href="{{ m.location.map_url }}" target="_blank" rel="noopener">{{ cal_location }}</a>
+            <a href="{{ m.location.map_url }}" target="_blank" rel="noopener">{{ where_html }}</a>
           {%- else -%}
-            {{ cal_location }}
+            {{ where_html }}
           {%- endif -%}
         </span>
       </li>
