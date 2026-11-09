@@ -1,0 +1,10 @@
+{%- assign s = site.data.site -%}
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <span>© {{ site.time | date: "%Y" }} {{ site.title }}</span>
+    <a href="{{ s.discord_url }}" target="_blank" rel="noopener">Discord</a>
+    <a href="{{ '/impressum.html' | relative_url }}">Impressum</a>
+    <a href="{{ '/datenschutz.html' | relative_url }}">Datenschutz</a>
+    <a href="{{ s.footer.credit_url }}" target="_blank" rel="noopener" class="footer__credit">{{ s.footer.credit }}</a>
+  </div>
+</footer>

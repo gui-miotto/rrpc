@@ -148,10 +148,4 @@ layout: default
   </section>
 </main>
 
-<footer class="footer">
-  <div class="wrap footer__inner">
-    <span>© {{ site.time | date: "%Y" }} {{ site.title }}</span>
-    <a href="{{ s.discord_url }}" target="_blank" rel="noopener">Discord</a>
-    <a href="{{ s.footer.credit_url }}" target="_blank" rel="noopener" class="footer__credit">{{ s.footer.credit }}</a>
-  </div>
-</footer>
+{% include footer.html %}

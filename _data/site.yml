@@ -106,3 +106,12 @@ supporters:
 footer:
   credit: "Background illustration: L. A. Rygg, Mechanical horse, US 491,927 (1893)."
   credit_url: https://patents.google.com/patent/US491927A/en
+
+# Contact details for the Impressum and Datenschutz pages (required by German law).
+# The address must be one where legal mail can be delivered (no P.O. box).
+legal:
+  name: "Guilherme Miotto"
+  street: ""
+  city: ""
+  email: "guilherme.miotto@gmail.com"
+  updated: November 2026   # "Stand" date of the privacy policy

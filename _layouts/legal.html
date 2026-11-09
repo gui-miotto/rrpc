@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<div class="topbar">
+  <div class="wrap topbar__inner">
+    <nav class="topbar__nav" aria-label="Main">
+      <a href="{{ '/' | relative_url }}">← {{ site.title }}</a>
+    </nav>
+  </div>
+</div>
+
+<main class="wrap legal">
+  <h1>{{ page.title }}</h1>
+  {{ content }}
+</main>
+
+{% include footer.html %}

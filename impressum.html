@@ -1,0 +1,31 @@
+---
+layout: legal
+lang: de
+title: Impressum
+---
+{%- assign l = site.data.site.legal -%}
+<p class="legal__lead" lang="en">Legal notice required by German law.</p>
+
+<h2>Angaben gemäß § 5 DDG</h2>
+<p>
+  {{ l.name }}<br>
+  {{ l.street }}<br>
+  {{ l.city }}<br>
+  Deutschland
+</p>
+
+<h2>Kontakt</h2>
+<p>E-Mail: <a href="mailto:{{ l.email }}">{{ l.email }}</a></p>
+
+<h2>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
+<p>
+  {{ l.name }}<br>
+  {{ l.street }}<br>
+  {{ l.city }}
+</p>
+
+<h2>Hinweis</h2>
+<p>Der {{ site.title }} ist eine private, nicht-kommerzielle Initiative. Die Teilnahme an den Treffen ist kostenlos.</p>
+
+<h2>Haftung für Links</h2>
+<p>Diese Website enthält Links zu externen Websites Dritter, auf deren Inhalte ich keinen Einfluss habe. Für diese Inhalte ist der jeweilige Anbieter oder Betreiber verantwortlich. Bei Bekanntwerden von Rechtsverletzungen werden entsprechende Links umgehend entfernt.</p>
