@@ -57,12 +57,18 @@ layout: default
   <section class="section wrap" id="meetings">
     <p class="label">{{ s.meetings.label }}</p>
     <h2>{{ s.meetings.heading }}</h2>
+    {%- if s.luma_calendar_url and s.luma_calendar_url != "" %}
+    <div class="subscribe">
+      <p>{{ s.meetings.subscribe_note }}</p>
+      <a class="btn btn--ghost" href="{{ s.luma_calendar_url }}" target="_blank" rel="noopener">{{ s.meetings.subscribe_text }} →</a>
+    </div>
+    {%- endif %}
 
     <h3 class="group-heading">{{ s.meetings.upcoming_heading }}</h3>
     <div class="meetings" data-group="upcoming">
       {%- for m in upcoming %}{% include meeting.html meeting=m %}{% endfor %}
     </div>
-    <p class="empty" data-empty="upcoming"{% if upcoming.size > 0 %} hidden{% endif %}>{{ s.meetings.empty_upcoming }} <a href="{{ s.discord_url }}" target="_blank" rel="noopener">Discord →</a></p>
+    <p class="empty" data-empty="upcoming"{% if upcoming.size > 0 %} hidden{% endif %}>{{ s.meetings.empty_upcoming }}</p>
 
     <h3 class="group-heading">{{ s.meetings.past_heading }}</h3>
     <div class="meetings meetings--past" data-group="past">

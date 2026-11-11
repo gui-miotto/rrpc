@@ -2,6 +2,10 @@
 # Text fields marked with "|" may contain several paragraphs (separate them with a blank line).
 
 discord_url: https://discord.gg/WNvN9YQQh
+# Public page of the club's Luma calendar, e.g. https://luma.com/<calendar-name>.
+# Subscribers get an email whenever a new event is added to that calendar.
+# Leave empty to hide the "Get notified" box.
+luma_calendar_url: "https://luma.com/rrpc"
 
 header:
   left: # A gathering of curious minds # I decided to remove this for now
@@ -43,7 +47,9 @@ meetings:
   heading: Meetings
   upcoming_heading: Upcoming
   past_heading: Previous meetings
-  empty_upcoming: The next meeting will be announced on Discord soon.
+  empty_upcoming: The next meeting will be announced soon.
+  subscribe_note: Subscribe to get an email whenever a new meeting is announced.
+  subscribe_text: Luma calendar
   empty_past: No meetings yet — the first one is coming up.
   edition_prefix: "Edition"
   signup_text: Sign up on Luma

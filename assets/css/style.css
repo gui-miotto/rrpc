@@ -144,6 +144,8 @@ a.paper__title:hover { color: var(--purple); text-decoration: underline; }
 .meetings--past .upcoming-only { display: none; }
 .meetings--past .meeting { background: transparent; }
 .empty { color: var(--ink-soft); font-style: italic; }
+.subscribe { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .75rem 1.5rem; margin: 0; }
+.subscribe p { margin: 0; color: var(--ink-soft); max-width: 60ch; }
 
 /* How it works */
 .steps { list-style: none; padding: 0; margin: 1rem 0 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(20px, 4vw, 48px); }
