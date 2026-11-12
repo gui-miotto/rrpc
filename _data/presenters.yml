@@ -1,0 +1,10 @@
+# Everyone who presents (or has presented) a paper.
+# Meetings refer to a presenter by "presenter_id" (see _data/meetings/*.yml).
+#
+#   presenter_id: unique short id, e.g. first initial + last name (gmiotto)
+#   name:         shown on the website
+#   website:      optional; when set, the name on the website links to it
+
+- presenter_id: gmiotto
+  name: Gui Miotto
+  website: "https://www.linkedin.com/in/gui-miotto/"

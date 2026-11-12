@@ -4,7 +4,7 @@
 {%- assign start_compact = m.start | remove: ":" -%}
 {%- assign end_compact = m.end | default: m.start | remove: ":" -%}
 {%- capture cal_title -%}{{ site.title }} #{{ m.edition }}{%- endcapture -%}
-{%- capture cal_details -%}{% for p in m.papers %}{{ forloop.index }}. {{ p.title }} ({{ p.presenter }})
+{%- capture cal_details -%}{% for p in m.papers %}{%- assign presenter = site.data.presenters | where: "presenter_id", p.presenter_id | first -%}{{ forloop.index }}. {{ p.title }} ({{ presenter.name | default: p.presenter_id | default: "TBA" }})
 {% endfor %}{% if m.signup_url %}Sign up: {{ m.signup_url }}{% endif %}{%- endcapture -%}
 {%- capture cal_location -%}{{ m.location.name }}{% if m.location.address %}, {{ m.location.address }}{% endif %}{%- endcapture -%}
 <article class="meeting" data-date="{{ day }}" id="edition-{{ m.edition }}">
@@ -57,7 +57,15 @@
           {%- else %}
           <span class="paper__title">{{ p.title }}</span>
           {%- endif %}
-          <span class="paper__presenter">{{ t.presenter_prefix }} <strong>{{ p.presenter | default: "TBA" }}</strong></span>
+          {%- assign presenter = site.data.presenters | where: "presenter_id", p.presenter_id | first %}
+          {%- assign presenter_name = presenter.name | default: p.presenter_id | default: "TBA" %}
+          <span class="paper__presenter">{{ t.presenter_prefix }} <strong>
+            {%- if presenter.website and presenter.website != "" -%}
+              <a href="{{ presenter.website }}" target="_blank" rel="noopener">{{ presenter_name }}</a>
+            {%- else -%}
+              {{ presenter_name }}
+            {%- endif -%}
+          </strong></span>
         </div>
         {%- if p.url and p.url != "" %}
         <a class="paper__dl" href="{{ p.url }}" target="_blank" rel="noopener" aria-label="Download {{ p.title | escape }}">{{ t.paper_link_text }} ↓</a>

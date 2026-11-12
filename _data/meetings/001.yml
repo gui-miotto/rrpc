@@ -17,8 +17,8 @@ description: ""             # optional short blurb shown under the title
 
 papers:                     # 1 to 3 papers
   - title: "TBA"
-    url: https://arxiv.org/
-    presenter: TBA
-  - title: "TBA"
-    url: https://arxiv.org/
-    presenter: TBA
+    url:
+    presenter_id: "TBA"
+  - title: "GR00T 2: Scaling Robot Foundation Models for Generalization, Dexterity, and Adaptation"
+    url: https://research.nvidia.com/labs/gear/gr00t-2/assets/gr00t2_whitepaper.pdf
+    presenter_id: "gmiotto"

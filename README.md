@@ -5,7 +5,8 @@ Static site built with [Jekyll](https://jekyllrb.com/). GitHub Pages builds it o
 ## Adding a meeting
 
 1. Copy `_data/meetings/001.yml` to a new file, e.g. `_data/meetings/002.yml`. The file name only has to be unique.
-2. Edit the fields: `edition`, `date` (YYYY-MM-DD), `start`/`end`, `location`, `signup_url` (Luma) and 1–3 `papers` (`title`, `url`, `presenter`). `title`, `description` and `location.map_url` are optional.
+2. Edit the fields: `edition`, `date` (YYYY-MM-DD), `start`/`end`, `location`, `signup_url` (Luma) and 1–3 `papers` (`title`, `url`, `presenter_id`). `title`, `description` and `location.map_url` are optional.
+   - `presenter_id` refers to an entry in `_data/presenters.yml` (`presenter_id`, `name`, `website`). Add the presenter there first. If the entry has a `website`, the presenter's name links to it. Leave `presenter_id` empty to show "TBA".
 3. Create the event on Luma **inside the club's Luma calendar** (not under your personal profile), so people who subscribed to the calendar get an email about it. Use its link as `signup_url`.
 4. Commit and push. The meeting shows up under **Upcoming**, and it moves to **Previous meetings** on its own after the date has passed. Visitors' browsers check the date, so you don't need to rebuild.
 
