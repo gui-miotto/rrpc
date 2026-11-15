@@ -16,9 +16,9 @@ title: ""                   # optional, e.g. "Learning from demonstration"; defa
 description: ""             # optional short blurb shown under the title
 
 papers:                     # 1 to 3 papers
-  - title: "TBA"
-    url:
-    presenter_id: "TBA"
+  - title: "Flash ALOHA: Learning Fast and Precise Manipulation"
+    url: "https://johnyao93.github.io/static/files/flash-aloha.pdf?v=2"
+    presenter_id: "sukhatoon"
   - title: "GR00T 2: Scaling Robot Foundation Models for Generalization, Dexterity, and Adaptation"
     url: https://research.nvidia.com/labs/gear/gr00t-2/assets/gr00t2_whitepaper.pdf
     presenter_id: "gmiotto"
